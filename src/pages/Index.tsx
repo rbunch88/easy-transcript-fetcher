@@ -1,9 +1,24 @@
 import { TranscriptForm } from "@/components/TranscriptForm";
+import { SparklesCore } from "@/components/ui/sparkles";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-950 to-black px-4 py-6 md:p-8">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-950 to-black px-4 py-6 md:p-8 relative">
+      {/* Sparkles Background */}
+      <div className="absolute inset-0 w-full h-full">
+        <SparklesCore
+          id="tsparticlesfullpage"
+          background="transparent"
+          minSize={0.6}
+          maxSize={1.4}
+          particleDensity={100}
+          className="w-full h-full"
+          particleColor="#FFFFFF"
+          speed={1}
+        />
+      </div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="space-y-10 md:space-y-12 animate-fade-in pt-6 md:pt-16">
           <div className="text-center space-y-6 md:space-y-8">
             <div className="inline-flex flex-col items-center">
