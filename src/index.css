@@ -35,10 +35,15 @@
   body {
     @apply bg-background text-foreground antialiased overflow-x-hidden;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+    letter-spacing: -0.025em;
   }
 
   html {
     @apply scroll-smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
   }
 }
 
