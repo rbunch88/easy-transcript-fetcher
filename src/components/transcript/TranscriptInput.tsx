@@ -20,23 +20,27 @@ export function TranscriptInput({
   onFormatChange,
 }: TranscriptInputProps) {
   return (
-    <div className="space-y-4">
-      <div className="space-y-2">
-        <Label htmlFor="video-url">Video URL or ID</Label>
+    <div className="space-y-6">
+      <div className="space-y-3">
+        <Label htmlFor="video-url" className="text-sm font-medium text-gray-200">
+          Video URL or ID
+        </Label>
         <Input
           id="video-url"
           placeholder="https://youtube.com/watch?v=... or video-id"
           value={videoUrl}
           onChange={(e) => onVideoUrlChange(e.target.value)}
           required
-          className="bg-background/50 border-white/10 focus:border-white/20 transition-colors"
+          className="bg-background/50 border-white/10 focus:border-white/20 transition-colors h-12 text-base"
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="space-y-2">
-          <Label htmlFor="language">Language</Label>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="space-y-3">
+          <Label htmlFor="language" className="text-sm font-medium text-gray-200">
+            Language
+          </Label>
           <Select value={language} onValueChange={onLanguageChange}>
-            <SelectTrigger id="language" className="bg-background/50 border-white/10">
+            <SelectTrigger id="language" className="bg-background/50 border-white/10 h-12">
               <SelectValue placeholder="Select language" />
             </SelectTrigger>
             <SelectContent>
@@ -47,10 +51,12 @@ export function TranscriptInput({
             </SelectContent>
           </Select>
         </div>
-        <div className="space-y-2">
-          <Label htmlFor="format">Output Format</Label>
+        <div className="space-y-3">
+          <Label htmlFor="format" className="text-sm font-medium text-gray-200">
+            Output Format
+          </Label>
           <Select value={format} onValueChange={onFormatChange}>
-            <SelectTrigger id="format" className="bg-background/50 border-white/10">
+            <SelectTrigger id="format" className="bg-background/50 border-white/10 h-12">
               <SelectValue placeholder="Select format" />
             </SelectTrigger>
             <SelectContent>

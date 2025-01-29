@@ -52,13 +52,17 @@ export function TranscriptForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-4xl mx-auto space-y-6">
+    <form onSubmit={handleSubmit} className="w-full max-w-4xl mx-auto space-y-8">
       <Card className="glass-morphism animate-slide-up">
-        <CardHeader>
-          <CardTitle className="text-gradient">Get Started</CardTitle>
-          <CardDescription>Enter a YouTube video URL or ID to get its transcript</CardDescription>
+        <CardHeader className="space-y-4">
+          <CardTitle className="text-gradient text-2xl md:text-3xl font-bold tracking-tight">
+            Get Started
+          </CardTitle>
+          <CardDescription className="text-base text-gray-400">
+            Enter a YouTube video URL or ID to get its transcript
+          </CardDescription>
         </CardHeader>
-        <CardContent className="space-y-4">
+        <CardContent className="space-y-6">
           <TranscriptInput
             videoUrl={videoUrl}
             language={language}
@@ -73,9 +77,13 @@ export function TranscriptForm() {
 
       {transcript && (
         <Card className="glass-morphism animate-slide-up">
-          <CardHeader>
-            <CardTitle className="text-gradient">Transcript</CardTitle>
-            <CardDescription>Retrieved transcript content</CardDescription>
+          <CardHeader className="space-y-4">
+            <CardTitle className="text-gradient text-2xl md:text-3xl font-bold tracking-tight">
+              Your Transcript
+            </CardTitle>
+            <CardDescription className="text-base text-gray-400">
+              Ready to use - copy or download
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <TranscriptOutput transcript={transcript} onCopy={copyToClipboard} />

@@ -9,16 +9,16 @@ interface TranscriptOutputProps {
 export function TranscriptOutput({ transcript, onCopy }: TranscriptOutputProps) {
   return (
     <div className="relative">
-      <pre className="bg-background/50 p-4 rounded-lg overflow-auto max-h-[400px] text-sm border border-white/10">
+      <pre className="bg-background/50 p-6 rounded-lg overflow-auto max-h-[400px] text-base font-mono border border-white/10">
         {transcript}
       </pre>
       <Button
         variant="outline"
         size="icon"
-        className="absolute top-2 right-2 bg-background/50 hover:bg-background/80 transition-colors"
+        className="absolute top-4 right-4 bg-background/50 hover:bg-background/80 transition-colors"
         onClick={onCopy}
       >
-        <Copy className="h-4 w-4" />
+        <Copy className="h-5 w-5" />
       </Button>
     </div>
   );

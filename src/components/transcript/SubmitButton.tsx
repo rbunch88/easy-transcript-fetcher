@@ -9,13 +9,13 @@ export function SubmitButton({ loading }: SubmitButtonProps) {
   return (
     <Button 
       type="submit" 
-      className="w-full transition-all hover:scale-[1.02] active:scale-[0.98]" 
+      className="w-full h-12 text-base font-medium transition-all hover:scale-[1.02] active:scale-[0.98]" 
       disabled={loading}
     >
       {loading ? (
         <>
-          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-          Fetching...
+          <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+          Fetching transcript...
         </>
       ) : (
         "Get Transcript"
